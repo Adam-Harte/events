@@ -14,3 +14,11 @@ eventBtn2.addEventListener('click', btn2HandleClick);
 
 // removing event listeners
 eventBtn2.removeEventListener('click', btn2HandleClick);
+
+// the event object
+const evtObjBtn = document.getElementById('eventObject');
+evtObjBtn.addEventListener('click', event => {
+	console.log(event);
+	console.log(event.target);
+	event.target.disabled = true;
+});
