@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="app.js"></script>
+		<title>Events</title>
+	</head>
+	<body>
+		<h1>Events</h1>
+		<p>
+			Events allow us to define user interactions witht the broswer such as
+			button clicks, mouse & keyboard interactions, drag and drop etc. We add
+			events using the addEventListener to a selected element then passing it
+			the event to listen to and the callback function to run upon the event
+			executing. Events also by default return some 'event' data for us to make
+			use of such as event.target which is shared among all events and then some
+			more specific data for only certain events such as coordinates for mouse
+			events.
+		</p>
+		<h3>Adding events</h3>
+		<p>
+			We can add events in 3 ways, adding the event attribute to the element in
+			html, modifying the event attribute on a selected element in JavaScript or
+			adding an eventListener in JavaScript. Adding an eventListener is the
+			recommended approach as this is the most flexible way to add events as you
+			can add multiple of the same events to execute different functions whereas
+			modifiyng or adding to attributes limits you to defining the logic for
+			that event one time as it is an attribute you assign values/code to.
+		</p>
+		<button onclick="alert('attribute event in html')">Click me</button>
+		<button id="evt1">Click me</button>
+		<button id="evt2">Click me</button>
+	</body>
+</html>
