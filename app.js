@@ -6,6 +6,11 @@ eventBtn1.onclick = function() {
 	alert('html attribute event assigned in JavaScript');
 };
 
-eventBtn2.addEventListener('click', () => {
+const btn2HandleClick = () => {
 	alert('event listener added');
-});
+};
+
+eventBtn2.addEventListener('click', btn2HandleClick);
+
+// removing event listeners
+eventBtn2.removeEventListener('click', btn2HandleClick);
