@@ -46,3 +46,34 @@ const form = document.querySelector('form');
 form.addEventListener('submit', event => {
 	event.preventDefault();
 });
+
+// capturing, bubbling and propagation
+const div1 = document.getElementById('div1');
+const div2 = document.getElementById('div2');
+const btn1 = document.getElementById('btn1');
+
+div1.addEventListener(
+	'click',
+	() => {
+		console.log('div 1');
+	},
+	true
+);
+
+div2.addEventListener('click', () => {
+	console.log('div 2');
+});
+
+btn1.addEventListener('click', event => {
+	console.log(
+		'I will only show this event as all propagation has been stopped'
+	);
+	event.stopPropagation();
+	event.stopImmediatePropagation();
+});
+
+btn1.addEventListener('click', () => {
+	console.log(
+		'I will not show as the earlier click event has been setup to call stopImmediatPropagation'
+	);
+});

@@ -70,5 +70,29 @@
 			<input type="text" id="name" placeholder="name" />
 			<button type="submit">Submit</button>
 		</form>
+		<h3>Capturing, Bubbling and Propagation</h3>
+		<p>
+			Event listeners go through one of two phases the capturing phase or the
+			bubbling phase. The capturing phase is when all event listeners of the
+			same type from ancestor elements are triggered from the top down to where
+			the element that caused the event. The bubbling phase is the reverse where
+			it starts from the element that triggered the event and goes up all the
+			ancestor elements and triggers any matching events of the same type. Event
+			propagation is the actual process of ancestor element events being
+			triggered. In JavaScript all event listeners added with addEventListener
+			have the bubbling phase set by default, we can change these events to use
+			the capturing phase by passing a 3rd argument to addEventListener which is
+			a boolean value true or false for setting the capturing phase. We can also
+			stop any propagation so that ancestor element events dont trigger by using
+			the event object method stopPropagation. There is also the event object
+			method stopImmediatePropagation which stops not only ancesotr element
+			events triggering but also any other event listeners of the same type on
+			that element e.g. multiple click listeners on the same button.
+		</p>
+		<div id="div1">
+			<div id="div2">
+				<button id="btn1">Click Me</button>
+			</div>
+		</div>
 	</body>
 </html>
