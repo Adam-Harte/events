@@ -40,3 +40,9 @@ mouseEvt.addEventListener('mouseenter', event => {
 	console.log(event);
 	console.log(event.movementY);
 });
+
+// preventDefault
+const form = document.querySelector('form');
+form.addEventListener('submit', event => {
+	event.preventDefault();
+});
