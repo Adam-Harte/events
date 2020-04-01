@@ -83,3 +83,6 @@ const ul = document.querySelector('ul');
 ul.addEventListener('click', event => {
 	event.target.style.backgroundColor = 'red';
 });
+
+// calling events programatically
+btn1.click();
