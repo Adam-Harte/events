@@ -22,3 +22,21 @@ evtObjBtn.addEventListener('click', event => {
 	console.log(event.target);
 	event.target.disabled = true;
 });
+
+// different event types
+const clickBtn = document.getElementById('click');
+const mouseEvt = document.getElementById('mouse');
+
+window.addEventListener('scroll', event => {
+	console.log(event);
+});
+
+clickBtn.addEventListener('click', event => {
+	console.log(event);
+	console.log(event.x);
+});
+
+mouseEvt.addEventListener('mouseenter', event => {
+	console.log(event);
+	console.log(event.movementY);
+});
