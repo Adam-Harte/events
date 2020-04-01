@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="app.js"></script>
+		<script src="app.js" defer></script>
 		<title>Events</title>
 	</head>
 	<body>
@@ -87,12 +87,29 @@
 			the event object method stopPropagation. There is also the event object
 			method stopImmediatePropagation which stops not only ancesotr element
 			events triggering but also any other event listeners of the same type on
-			that element e.g. multiple click listeners on the same button.
+			that element e.g. multiple click listeners on the same button. Some events
+			dont propagate such as the mouse events and you can check if an event
+			propagates by the bubbles property on the event object.
 		</p>
 		<div id="div1">
 			<div id="div2">
 				<button id="btn1">Click Me</button>
 			</div>
 		</div>
+		<h3>Event Delegation</h3>
+		<p>
+			Event delegation is a pattern involving us taking advantage of event
+			propagation to use less events to achieve the same user
+			expeirence/functionality result. We can for example set up a listener on a
+			parent element and then with the event object target property tie specific
+			functionality to its children rather than having to add an event listener
+			to each child element. This is known as delegation as we are delegating
+			the event responsblity to the parent element.
+		</p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
 	</body>
 </html>

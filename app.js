@@ -77,3 +77,9 @@ btn1.addEventListener('click', () => {
 		'I will not show as the earlier click event has been setup to call stopImmediatPropagation'
 	);
 });
+
+// event delegation
+const ul = document.querySelector('ul');
+ul.addEventListener('click', event => {
+	event.target.style.backgroundColor = 'red';
+});
